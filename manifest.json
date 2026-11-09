@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAls3dSi/B/lFILE0iq7vbjKVMrpOc17tD/PyvSgjORm2sxh7SX2O7QvvrrsG6DSCelDzYN8aVSMhCasPiKaYtwlH6Xw96YdRgq4ppwb1qLHI4MUJnFq4Yx0oDuzSN9AMzi1MXz02LwLre3aF6TwCYcpIEMB7vCrXPpKxJT9Ij3Ty6QSN5nwHGc9aHnPd+LgjLVKp0fG5zLG5/2WAX35dC+8K/zF8s1So3wU+tSsbtprKqssc+GKnKLPJpc8xvcvEVbAGCvSiwNsA+EMxsWuvCohUMb/b27bars2ZZMfTmPkM5laSg3uoxYNAMHtCVoqTTZ3MZq3aGy8gigDzV1Tp8lwIDAQAB",
+  "name": "GeoData • Кадастровый помощник",
+  "short_name": "GeoData Участки",
+  "version": "1.0.0",
+  "description": "Локальный геоинформационный органайзер земельных участков и объектов недвижимости (Local-First)",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "alarms",
+    "sidePanel",
+    "tabs",
+    "windows",
+    "declarativeNetRequest"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "host_permissions": [
+    "https://nspd.gov.ru/*",
+    "https://binep.ru/*",
+    "https://api.kontur.ru/*",
+    "https://*.tile.openstreetmap.org/*",
+    "https://*.basemaps.cartocdn.com/*",
+    "https://zemlya-pro-web.vercel.app/*",
+    "https://*.avito.ru/*",
+    "https://*.cian.ru/*",
+    "https://*.etagi.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_ui": {
+    "page": "app.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "GeoData • Кадастровый помощник",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "externally_connectable": {
+    "ids": ["*"]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["maplibre-gl-worker.mjs"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

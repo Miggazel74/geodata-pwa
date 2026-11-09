@@ -1,0 +1,1 @@
+import{d as r,j as e,R as o,T as i,f as s}from"./ParcelsList-bJVrUcHD.js";import{i as a}from"./sync-service-CFOvpKFb.js";a();const t=document.getElementById("root");t&&r.createRoot(t).render(e.jsx(o.StrictMode,{children:e.jsx(i,{children:e.jsx(s,{})})}));
